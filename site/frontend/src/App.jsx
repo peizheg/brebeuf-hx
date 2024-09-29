@@ -12,6 +12,7 @@ import userServices from './services/user'
 import PlaceServices from './services/places'
 import Socials from './routes/Socials'
 import SignUp from './routes/SignUp'
+import Navbar from './components/Navbar'
 
 const App = () => {
   const sendMessage = async (newMessage) => {
@@ -49,24 +50,8 @@ const App = () => {
   }
 
   return (
-    <div id="pc-part">
-        <header>
-          <nav id="navbar">
-            <Link className='navlink navbar-item' to='/'>
-              <span className='navbar-text' id='logo-name'>Projet Ganymède</span>
-            </Link>  
-            <ul id="navbar-links">
-              <p className="opacity-mid">|</p>
-              <Link className="navbar-item navbar-text" to="/donate">Dons</Link>
-              <Link className="navbar-item navbar-text" to="/contact">Nous joindre</Link>
-              <Link className="navbar-item navbar-text" to="/socials">Médias Sociaux</Link>
-              <p className="opacity-mid">|</p>
-            </ul>
-            <Link to="/sign-up" id='nav-button'>
-              <button id="contact-button"><span>Devenir bénévole</span></button>
-            </Link>
-          </nav>
-        </header>
+    <div className=''>
+      <Navbar />
         <Routes>
           <Route path='/contact' element={<Contact sendMessage={sendMessage} /> } />
           <Route path='/socials' element={<Socials /> } />

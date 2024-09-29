@@ -11,24 +11,13 @@ border: 5px solid red;
 
 */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html, body {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #FBFBFB;
-}
-
-@media (max-width: 660px) {
-    #pc-part {
-        display: none;
-    }
-}
-
-@media (min-width: 661px) {
-    #report-section {
-        display: none;
-    }
-    
+    background-color: #FFFAF3;
+    font-family: "Fredoka", sans-serif;
 }
 
 /* TEXT MODIFICATIONS and REUSABLE CLASSES*/
@@ -67,143 +56,6 @@ blockquote p {
     background-color: light;
     padding: 15px;
 }
-
-/* NAVBAR AND INTERNAL ITEMS START */
-/* CONTACT BUTTON START */
-
-#contact-button {
-    font-size: 1.1rem;
-    border-radius: 5px;
-    padding: 10px;
-    padding-right: 0px;
-    color: white;
-    background-color: #393939;
-    border: none;
-    cursor: pointer;
-    transition: all 0.25s;
-    text-decoration: none;
-    user-select: none;
-    overflow: hidden;
-    -webkit-user-drag: none;
-}
-
-#contact-button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-    
-}
-
-#contact-button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-
-#contact-button:hover span {
-    padding-right: 20px;
-    
-}
-
-#contact-button:hover span:after {
-    opacity: 1;
-    right: 0;
-}
-
-#contact-button:hover {
-    background-color: #565656;
-    content: "\00bb";
-}
-
-#contact-button:active {
-    opacity: 0.5
-}
-/* 
-CONTACT BUTTON END 
-NAVBAR CONTINUES
-*/
-
-#logo-image {
-    border-radius: 5px;
-    transition: all 0.25s;
-    background-color: none;
-}
-
-#logo-name {
-    font-size: 18px;
-    font-weight: 460;
-}
-
-.navlink {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#logo-image:active {
-    opacity: 0.5;
-}
-
-#navbar {
-    padding-left: 5vw;
-    padding-right: 5vw;
-    display: flex;
-    align-items: center;
-    background-color: #393939;
-    justify-content: space-between;
-    border-bottom: 2px #565656 solid;
-}
-
-#navbar-links {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-#navbar-links p {
-    color: lightgrey;
-    padding: 0 10px 0 10px;
-}
-
-.navbar-text {
-    font-size: 16px;
-}
-
-.navbar-item {
-    padding: 10px 30px 10px 30px;
-    color: white;
-    text-decoration: none;
-    user-select: none;
-    border-radius: 5px;
-    transition: all .30s;
-    -webkit-user-drag: none;
-}
-
-.navbar-item:hover {
-    border: none;
-    background-color: #565656;
-}
-
-.navbar-item:active {
-    opacity: 0.5;
-}
-
-.navbar-item:visited, .navbar-item:link {
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-drag: none;
-}
-
-#joindre {
-    font-size: 1.15rem;
-}
-
-/* NAVBAR END */
 
 /* INFO COMPONENT START*/
 
